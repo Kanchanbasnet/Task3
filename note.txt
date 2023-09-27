@@ -1,0 +1,13 @@
+First ma chai we create a folder named Node-app tespaxi hamile npm init -y garyo
+installed express body-parser fs 
+express provide garxa tools for handle request response routing.
+
+body-parser - express ko lagi middleware ko rup ma kam garxa jasle http request haru handle garxa ani available banaidinxa req.objectma url encoding haru ma useful hunxa.
+
+fs - file system which is used for interacting with file system.
+
+node-app bitra euta folder banayo tespaxi hamile 3 ta json files banayo
+order.json
+products.json
+user.json
+app.js file pani banauni.

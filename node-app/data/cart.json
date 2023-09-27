@@ -1,0 +1,16 @@
+[
+    {
+        "userId":1,
+        "productId": 101,
+        "productName": "Laptop",
+        "quantity":1,
+        "totalPrice":999
+    },
+    {
+        "userId":2,
+        "productId": 105,
+        "productName": "Pant",
+        "quantity": 3,
+        "totalPrice": 555
+      }
+]

@@ -1,0 +1,23 @@
+[
+    {
+        "id": 101,
+        "productName": "Laptop",
+        "price":999,
+        "description":"High-end Laptop",
+        "productType":"Electronics"
+    },
+    {
+        "id": 102,
+        "productName": "SmartPhone",
+        "price":888,
+        "description":"High-end Mobile",
+        "productType":"Electronics"
+    },
+    {
+        "id": 103,
+        "productName": "SmartWatch",
+        "price":555,
+        "description":"High-end Watch",
+        "productType":"Electronics"
+    }
+]
