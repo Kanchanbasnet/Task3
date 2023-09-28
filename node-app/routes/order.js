@@ -41,7 +41,7 @@ orderRouter.post('/addToCart', (req, res) => {
     return res.status(404).send(`User or Product could not be found.`);
   }
 
-  const totalPrice = product.price * quantity; // Calculate total price for this cart item
+  const totalPrice = product.price * quantity; 
 
   const cartItem = {
     userId,
@@ -68,18 +68,18 @@ orderRouter.post('/checkout', (req, res) => {
     return res.status(404).send("User is not found");
   }
 
-  if (!user.cart || user.cart.length === 0) { // Check if the cart is empty
+  if (!user.cart || user.cart.length === 0) { 
     return res.status(404).send("User's Cart is empty.");
   }
 
-  // Calculate the total price of items in the user's cart
+  
   const totalPrices = user.cart.reduce((total, item) => total + item.totalPrice, 0);
 
   if (totalPrices < 500) {
     return res.status(400).send("Minimum order total not met.");
   }
 
-  // Create a new order object
+  
   const newOrder = {
     id: orders.length + 1, 
     userId: user.id,
@@ -92,7 +92,7 @@ orderRouter.post('/checkout', (req, res) => {
   orders.push(newOrder);
   fs.writeFileSync(path.join(__dirname, '../data/orders.json'), JSON.stringify(orders, null, 2), 'utf-8');
 
-  // Clear the user's cart after successful checkout
+  
   user.cart = [];
   fs.writeFileSync(path.join(__dirname, '../data/users.json'), JSON.stringify(users, null, 2), 'utf-8');
 
