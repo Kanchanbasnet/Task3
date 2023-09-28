@@ -8,10 +8,10 @@ const orderRouter = express.Router();
 orderRouter.use(bodyParser.json());
 
 // Import JSON files
-const orders = require('../data/order.json'); // Use the correct file name
-const users = require('../data/user.json'); // Use the correct file name
+const orders = require('../data/order.json'); 
+const users = require('../data/user.json'); 
 const products = require('../data/products.json');
-const cart = require('../cart.json'); // Use the correct file name
+const cart = require('../cart.json'); 
 
 orderRouter.get('/history', (req, res) => {
   res.send(orders);
@@ -33,7 +33,7 @@ orderRouter.delete('/history/:orderId', (req, res) => {
 
 // Adding products to cart
 orderRouter.post('/addToCart', (req, res) => {
-  const { userId, productId, quantity } = req.body; // Removed productName from req.body
+  const { userId, productId, quantity } = req.body; 
   const user = users.find((user) => user.id == parseInt(userId));
   const product = products.find((product) => product.id == parseInt(productId));
 
@@ -47,7 +47,7 @@ orderRouter.post('/addToCart', (req, res) => {
     userId,
     productId,
     quantity,
-    totalPrice, // Include the total price in the cart item
+    totalPrice, 
   };
 
   if (!user.cart) {
@@ -81,10 +81,10 @@ orderRouter.post('/checkout', (req, res) => {
 
   // Create a new order object
   const newOrder = {
-    id: orders.length + 1, // Use 'id' instead of 'orderId'
+    id: orders.length + 1, 
     userId: user.id,
     items: user.cart,
-    total_price: totalPrices, // Use 'total_price' instead of 'totalPrice'
+    total_price: totalPrices, 
     order_status: "pending",
     order_date: new Date().toISOString().slice(0, 10),
   };
