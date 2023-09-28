@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 const productRouter = express.Router();
-productRouter.use(express.json());
+
 
 let products = [
     {
@@ -59,6 +59,13 @@ productRouter.post('/', (req, res) => {
     res.send(`The product with id ${product.id} has been added successfully.`);
 });
 
+productRouter.get('/outofStock', (req, res) => {
+    const outofStock = products.filter((product) => product.quantity < 5);
+    console.log(outofStock);
+    res.send(outofStock);
+    
+});
+
 productRouter.get('/:searchQuery', (req, res) => {
     const searchQuery = req.params.searchQuery;
     const filteredProduct = products.filter((product) => {
@@ -95,10 +102,6 @@ productRouter.patch('/:productName', (req, res) => {
     res.send(`Product with name ${productName} has been updated successfully.`);
 });
 
-productRouter.get('/outofStock', (req, res) => {
-    const outofStock = products.filter((product) => product.quantity < 5);
-    res.send(outofStock);
-    console.log(outofStock);
-});
+
 
 module.exports = productRouter;

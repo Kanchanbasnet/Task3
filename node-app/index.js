@@ -5,14 +5,14 @@ const productRouter = require('./routes/products.js');
 const orderRouter = require('./routes/order.js');
 
 const app = express();
-const PORT = 4000;
+const PORT = 3000;
 
 app.use(bodyParser.json());
 
-app.use('/user', userRouter);
-app.use('/products', productRouter);
-app.use('/order', orderRouter);
-app.use('/addToCart',orderRouter);
+// Use routers for different routes
+app.use('/users', userRouter); // User-related routes
+app.use('/products', productRouter); // Product-related routes
+app.use('/orders', orderRouter); // Order-related routes
 
 app.get('/', (req, res) => {
   res.send('Hello from Homepage');

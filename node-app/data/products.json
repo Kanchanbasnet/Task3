@@ -2,22 +2,41 @@
     {
         "id": 101,
         "productName": "Laptop",
-        "price":999,
-        "description":"High-end Laptop",
-        "productType":"Electronics"
+        "price": 999,
+        "quantity": 3,
+        "description": "High-end Laptop",
+        "productType": "Electronics"
     },
     {
         "id": 102,
         "productName": "SmartPhone",
-        "price":888,
-        "description":"High-end Mobile",
-        "productType":"Electronics"
+        "price": 888,
+        "quantity": 2,
+        "description": "High-end Mobile",
+        "productType": "Electronics"
     },
     {
         "id": 103,
         "productName": "SmartWatch",
-        "price":555,
-        "description":"High-end Watch",
-        "productType":"Electronics"
+        "price": 555,
+        "quantity": 6,
+        "description": "High-end Watch",
+        "productType": "Electronics"
+    },
+    {
+        "id": 104,
+        "productName": "Fish",
+        "price": 555,
+        "quantity": 9,
+        "description": "Sea-Food",
+        "productType": "Grocery"
+    },
+    {
+        "id": 105,
+        "productName": "Pant",
+        "price": 555,
+        "quantity": 10,
+        "description": "Clothes",
+        "productType": "Clothing"
     }
 ]

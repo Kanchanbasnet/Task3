@@ -1,25 +1,24 @@
 [
-
-{
-
-    "id": 1,
-    "firstName":"Kanchan",
-    "lastName": "Basnet",
-    "email" : "Kanchanbasnet5@gmail.com"
-},
-
-{
-    "id" : 2,
-    "firstName" : "Ram",
-    "lastName" : "Shrestha",
-    "email" : "RamShrestha@gmail.com"
-
-},
-
-{
-    "id" : 3,
-    "firstName" : "Sita",
-    "lastName" : "Thapa",
-    "email" : "SitaThapa@gmail.com"
-}
-]
+    {
+      "id": 1,
+      "firstName": "Kanchan",
+      "lastName": "Basnet",
+      "email": "Kanchanbasnet5@gmail.com",
+      "cart": [] 
+    },
+    {
+      "id": 2,
+      "firstName": "Ram",
+      "lastName": "Shrestha",
+      "email": "RamShrestha@gmail.com",
+      "cart": []
+    },
+    {
+      "id": 3,
+      "firstName": "Sita",
+      "lastName": "Thapa",
+      "email": "SitaThapa@gmail.com",
+      "cart": []
+    }
+  ]
+  

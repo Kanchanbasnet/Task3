@@ -1,8 +1,33 @@
 [
-  {
-    "productId": 101,
-    "productName": "Laptop",
-    "quantity": 1,
-    "totalPrice": null
-  }
-]
+    {
+      "userId": 1,
+      "cartItems": [
+        {
+          "productId": 101,
+          "quantity": 2,
+          "totalPrice": 1998
+        },
+        {
+          "productId": 104,
+          "quantity": 3,
+          "totalPrice": 1665
+        }
+      ]
+    },
+    {
+      "userId": 2,
+      "cartItems": [
+        {
+          "productId": 102,
+          "quantity": 1,
+          "totalPrice": 888
+        },
+        {
+          "productId": 105,
+          "quantity": 2,
+          "totalPrice": 1110
+        }
+      ]
+    }
+  ]
+  
